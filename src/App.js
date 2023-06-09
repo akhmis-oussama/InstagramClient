@@ -33,7 +33,7 @@ function App() {
   },[getTokenfromLocalStorage]) 
 
   useEffect(() => {
-    fetch("https://instagram-service-appclone.onrender.com")
+    fetch("https://instagram-clone-app-cc7x.onrender.com")
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   },[]);
