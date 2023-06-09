@@ -46,6 +46,7 @@ function App() {
         <Route path="/forgotpassword" element={<ForgotPassword/>}/>
         <Route path="/reset/:token" element={<ResetPassword/>}/>
 
+      <Route element={<PrivateRoute/>}>
        <Route element={<Mainlayout/>}>
         <Route exact path="/home" element={<Home/>}/>
         <Route path="/createPosts" element={<CreatePost/>}/>
@@ -53,6 +54,7 @@ function App() {
         <Route  path='/profile/:userid'  element={<UserProfile/>}/>
         <Route path='/explore' element={<Explore/>}/>
         </Route>
+      </Route>
         
 
         
