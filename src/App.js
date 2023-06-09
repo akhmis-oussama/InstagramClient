@@ -11,7 +11,6 @@ import CreatePost from './Components/CreatePost/CreatePost';
 import PrivateRoute from './Utils/PrivateRoute';
 import Profile from './Components/Profile/Profile';
 import UserProfile from './Components/Profile/UserProfile';
-import { getTokenfromLocalStorage } from './Utils/Utils';
 import Explore from './Components/Explore/Explore';
 
 
@@ -20,20 +19,11 @@ function App() {
 
   const [message, setMessage] = useState("");
 
-  //check if user is 
-  useEffect(()=>{
+  //check if user is logined
 
-    if(localStorage.getItem("token") && localStorage.getItem("user")){
-      <Navigate to="/home"/>
-    }
-    else{
-      <Navigate to="/"/>
-    }
-
-  },[getTokenfromLocalStorage]) 
 
   useEffect(() => {
-    fetch("https://instagram-clone-app-cc7x.onrender.com")
+    fetch("https://instagram-service-appclone.onrender.com")
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   },[]);
