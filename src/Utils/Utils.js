@@ -1,4 +1,4 @@
-export const baseUrl = "http://localhost:5000/api"
+export const baseUrl = "http://https://instagram-clone-app-cc7x.onrender.com/api"
 
 export const getUserfromLocalStorage = localStorage.getItem("user")
 ? JSON.parse(localStorage.getItem("user")) : null
